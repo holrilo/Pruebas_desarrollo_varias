@@ -1,0 +1,109 @@
+Comandos laravel 
+
+-Crear poryecto 
+	opcion 1	laravel new "nombre del proyecto o app"
+	opcion 2	composer create-project laravel/laravel libreria
+
+-Crear proyecto con jetstream 
+	laravel new "nombre de proyecto " --jet 
+	
+	opciones livewire trabaja ncon el motor de palntila sque ya bieno con laravel 
+		 inertia trabajar con vue js 
+
+-Al crear el proyecto editar Providers
+	providers/AppServiceProvider 
+	Adicionar 
+		use Illuminate\Support\Facades\Schema;
+
+    public function boot()
+    {
+        //
+        Schema::defaultStringLength(191);
+    }
+
+-migrar la base de datos para jetStream 
+	php artisan migrate
+
+-install Jetstream
+	composer require laravel/jetstream
+
+- Install livewire or inertia
+	php artisan jetstream:install livewire
+
+-install
+	npm install
+	npm run dev
+
+-Correr servidor 
+	php artisan serve 
+
+-Crear cotnroladores - Controller
+	php artisan make:controller InicioController
+
+- Request = Son peticiones hacia el servidor 
+
+- crear controlador con las funciones de un CRUD
+	php artisan make:controller CrudController --resource
+
+- crear Tablas en la BD desde laravel y migrar 
+	php artisan make:migration create_cliente_table
+
+
+- modelos o ELOQUENT
+	para utuilzir las tablas cradas en la base de datos es considerala utilizar ORM object Relation Mapping ( mapeo relacinoado de objetos )
+	php artisan make:model Persona
+
+-- crea los mdelos en combio con el migrate , modelo y controller
+php artisan make:model Empleado -mcr
+
+--listar rutas en consola
+	php artisan route:list
+
+--crear enlace para utilizar storage 
+	php artisan storage:link
+
+
+-- agregar para eliminar archivos de storage
+	use Illuminate\Support\Facades\Storage;
+
+-- agregar todo lo que se requiere para la interface del login y bootstrap
+	composer require laravel/ui
+
+-- agregar boostrap 
+	php artisan ui bootstrap --auth
+	npm install
+npm run dev
+
+
+
+--crear en cascada Base de datos , cuando se borra en cascada se borra todos lo elementos que se relacionan en ella 
+
+            $table->engine="InnoDB";
+            $table->bigIncrements('id');
+            $table->bigInteger('categoria_id')->unsigned();
+            $table->string('nombre');
+            $table->timestamps();
+            $table->foreign('categoria_id')->references('id')->on('categorias')->onDelete("cascade");
+
+-- crear la plantilla dle crud de manera automatica con la erramienta de ibex/crud 
+	composer require ibex/crud-generator --dev
+	php artisan vendor:publish --tag=crud
+	php artisan make:crud categorias
+       
+
+
+https://github.com/jeroennoten/Laravel-AdminLTE
+
+php artisan migrate:rollback devolver la migracion del ultimo lote 
+
+Perimisos roles 
+
+Laravel-permission
+https://spatie.be/docs/laravel-permission/v5/installation-laravel
+
+interface 
+Laravel UI Stisla
+
+form y html 
+permite manejra mejor los estilos 
+laravel collective 
