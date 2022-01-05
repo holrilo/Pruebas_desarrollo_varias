@@ -1,0 +1,11 @@
+Bootstrap 4, Font awesome 4, Font Awesome 5 Free & Pro snippets
+Bootstrap 5 Quick Snippets
+Bootstrap v4 Snippets
+Laravel Blade formatter
+Laravel Blade Snippets
+Laravel Snippets
+Material Icon Theme
+PHP Intelephense
+Spanish Language Pack for Visual Studio Code
+The Powerful Bootstrap
+Prettier - Code formatter

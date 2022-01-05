@@ -107,3 +107,45 @@ Laravel UI Stisla
 form y html 
 permite manejra mejor los estilos 
 laravel collective 
+
+
+instalr en ubuntu 
+
+primero intalar php con comando 
+sudo apt-get installa php 
+sudo apt-get install php-bcmath
+sudo apt-get install php-mxml
+sudo apt-get install php-mbstring
+
+
+
+First make sure you have installed the composer.
+
+composer install
+
+If you already have installed then update the composer.
+
+composer update
+
+cp .env.example .env
+ php artisan key:generate
+ 
+ 
+ 
+--- Ejecutar xammp
+
+sudo /opt/lampp/manager-linux-x64.run
+
+ ---solucionar problema de migrate en ubuntu 
+ 
+ step1:php -v
+
+step2: Install php mysql extension
+
+php 7.0 sudo apt-get install php7.0-mysql
+
+php 7.1 sudo apt-get install php7.1-mysql
+
+php 7.2 sudo apt-get install php7.2-mysql
+
+php 7.3 sudo apt-get install php7.3-mysql

@@ -1,0 +1,39 @@
+Comando basicos 
+
+configuracion inicial 
+
+git config global user.name "Tu nombre aquí"
+git config global user.email "tu_email_aquí@example.com"
+
+
+git init - inicializar proyecto
+git add <file> - aderir archivo a l proyecto
+git add . - aderir todos los archivos del royecyo 
+git status -  mirar que archivos se han subido 
+git commit -  guardar los cambiso en la version :wq  
+git commit -m "comentario "   - este es para no abrir la ventanda emergente del comando 
+git push origen "nombre de la rama qeu se sube" 
+git pull
+git clone 
+git diff -  mirar la diferencias de un archivo 
+git log - mirar las fotos o los commit tomados 
+git branch -  crear ramas , version alternativas 
+git show-branch - Esto nos muestra todas las ramas del proyecto con sus commits realizados. La salida sería como la de la siguiente imagen.
+git checkout login -  cambiar por defecto a una rama , con el comando -b cargams la rama creada 
+git merge "nombre de la rama a fusionar " - nos permite fusionar las ramas 
+git branch -d rama_a_borrar - Borrado de la rama en local
+git push origin --delete rama_a_borrar - Eliminar un branch en remoto
+git fetch - Descargar una rama de remoto
+.gitignore -  se crea archivo para ignorar las carpetas o archivos que no queremos que se guarde en el proyecto 
+
+cargarlo a githab 
+
+git remote add origin https://github.com/holrilo/git-pruebas.git
+git push -u origin master  
+
+
+
+Tres estados 
+working directory 
+staging area
+repository 
